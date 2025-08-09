@@ -38,24 +38,6 @@ For Hardware:
 
 ### Implementation
 For Software:
-# Installation
-bash
-
-# Clone the repository
-git clone: https://github.com/NBR-24/PothuHole
-
-# Navigate to the project directory
-cd PothuHole
-
-# Install dependencies
-npm install
-
-# Run
-bash
-
-# Start the development server
-npm start
-
 # Run
 http://pothu-hole.vercel.app
 
