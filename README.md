@@ -54,8 +54,25 @@ For Software:
 <img width="2880" height="1524" alt="Screenshot 2025-08-09 212712" src="https://github.com/user-attachments/assets/42ae30b9-c2fc-46c1-bc64-d4a2d54b62f1" />
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![WhatsApp Image 2025-08-09 at 21 42 36_7f36b196](https://github.com/user-attachments/assets/e186e6e9-24f9-4260-8f2b-83fb530d257e)
+
+[User] --> [React App: PothuHole]
+
+  React App --> [Report Page]
+    - User uploads photo (compressed to Base64)
+    - User sets location & danger level (sees a funny quote)
+    - On submit, data is sent to Firestore
+
+  React App --> [Firebase Firestore]
+    - (Writes) New report document is created in 'reports' collection
+    - (Reads) Fetches all reports for Map, List, and Leaderboard pages
+
+  Firebase Firestore --> [React App]
+    - Data is displayed on [Map Page], [List Page], and [Leaderboard Page]
+
+  Report Page --> [Success Page]
+    - Displays the submitted report details and the quote
+    - User can generate and share a 'Pothole Warning' card
 
 
 ## Team Contributions
