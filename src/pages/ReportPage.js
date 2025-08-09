@@ -29,6 +29,7 @@ import { PhotoCamera, MyLocation, Save } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
+import { getRandomQuote } from '../data/quotes';
 import imageCompression from 'browser-image-compression';
 
 const ReportPage = () => {
@@ -37,6 +38,7 @@ const ReportPage = () => {
   const [preview, setPreview] = useState('');
   const [dangerLevel, setDangerLevel] = useState(5);
   const [description, setDescription] = useState('');
+  const [quote, setQuote] = useState('');
   const [location, setLocation] = useState({ lat: null, lng: null, district: '', formattedAddress: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -164,7 +166,15 @@ const ReportPage = () => {
         createdAt: serverTimestamp(),
       });
 
-      navigate('/');
+      navigate('/success', { 
+        state: { 
+          dangerLevel, 
+          district: location.district, 
+          imageUrl: imageBase64, 
+          createdAt: { seconds: Math.floor(Date.now() / 1000) },
+          quote
+        }
+      });
 
     } catch (err) {
       console.error('Error adding document: ', err);
@@ -173,6 +183,15 @@ const ReportPage = () => {
       setIsLoading(false);
     }
   };
+
+  const handleDangerLevelChange = (event, newValue) => {
+    setDangerLevel(newValue);
+    setQuote(getRandomQuote(newValue));
+  };
+
+  useEffect(() => {
+    setQuote(getRandomQuote(dangerLevel));
+  }, []);
 
   return (
     <Container maxWidth="md" sx={{ mt: 4, mb: 6 }}>
@@ -335,7 +354,7 @@ const ReportPage = () => {
               <Typography>😊</Typography>
               <Slider
                 value={dangerLevel}
-                onChange={(e, newValue) => setDangerLevel(newValue)}
+                onChange={handleDangerLevelChange}
                 aria-labelledby="danger-level-slider"
                 min={1}
                 max={10}

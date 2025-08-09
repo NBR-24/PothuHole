@@ -59,26 +59,9 @@ const DangerLevelMeter = styled(Box)(({ dangerLevel, theme }) => ({
 // --- Content Data ---
 
 // An array of funny, light-hearted captions to make the success page more engaging.
-const funnyCaptions = [
-  "Another one bites the dust!",
-  "Watch out! Pothole ahead!",
-  "This pothole has seen things...",
-  "Not all heroes wear capes. Some report potholes!",
-  "Saving tires, one report at a time.",
-  "This pothole is guilty of vehicular manslaughter (of my suspension).",
-  "I found Waldo! Just kidding, it's just a pothole.",
-  "This pothole is more popular than me on social media.",
-  "I'd rate this pothole 5 stars on Yelp for being impressively deep.",
-  "They say every pothole tells a story. This one says 'ouch!'"
-];
 
-/**
- * @description Selects a random caption from the `funnyCaptions` array.
- * @returns {string} A random caption.
- */
-const getRandomCaption = () => {
-  return funnyCaptions[Math.floor(Math.random() * funnyCaptions.length)];
-};
+
+
 
 const ReportSuccess = () => {
   // --- State and Hooks ---
@@ -87,10 +70,10 @@ const ReportSuccess = () => {
   const navigate = useNavigate(); // Hook for programmatic navigation.
 
   // Destructure the report details from the location state, providing default values as a fallback.
-  const { dangerLevel = 5, district = 'Unknown Location', imageUrl, createdAt } = location.state || {};
+  const { dangerLevel = 5, district = 'Unknown Location', imageUrl, createdAt, quote } = location.state || {};
   
-  // Get a random caption for this report instance.
-  const caption = getRandomCaption();
+  // Use the quote passed from the report page, or a default message if none is provided.
+  const caption = quote || 'Thanks for your report!';
   
   /**
    * @description Handles the native share functionality using the Web Share API.
@@ -126,7 +109,7 @@ const ReportSuccess = () => {
         <Card sx={{ maxWidth: 400, margin: '20px auto' }}>
           {imageUrl && <CardMedia component="img" height="200" image={imageUrl} alt="Reported pothole" />}
           <CardContent>
-            <Typography variant="h6" gutterBottom>{caption}</Typography>
+            <Typography variant="h6" gutterBottom sx={{ fontStyle: 'italic' }}>"{caption}"</Typography>
             <Box sx={{ textAlign: 'left', my: 2 }}>
               <Typography variant="body1"><strong>Location:</strong> {district}</Typography>
               <Typography variant="body1"><strong>Danger Level:</strong> {dangerLevel}/10</Typography>
