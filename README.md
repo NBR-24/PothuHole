@@ -13,83 +13,73 @@
 - Member 2: Navami B R - Govt. Engineering College Palakkad
 
 ### Project Description
-[2-3 lines about what your project does]
+"PothuHole" (a play on "Pothole" and the Malayalam word "Pothu" for Public) is a revolutionary web app that turns the civic duty of reporting public holes into a fun, competitive, and shareable experience. Users can upload photos of potholes, rate their danger level with a satisfying slider, and see all reported hazards on an interactive map. It’s not just about fixing roads; it’s about making bureaucracy fun with a touch of local Mallu humor.
+
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Reporting potholes is a dull, soul-crushing process that involves navigating drab government websites. Plus, there's no way to express the true emotional and spinal damage a particularly nasty pothole inflicts upon you and your vehicle. The world desperately needed a way to gamify road maintenance.
+
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We've built a platform where every pothole report is a chance for glory! Our app assigns a "Danger Level" to each pothole, accompanied by a witty, context-aware Malayalam quote. Users can climb the district leaderboard, share hilarious, auto-generated "Pothole Warning" cards on social media, and finally give a voice to the silent suffering of their car's suspension.
+
+
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- *Languages:* JavaScript (ES6+)
+- *Frameworks:* React.js
+- *Libraries:* Material-UI, React-Leaflet, Firebase, React-Router-DOM, browser-image-compression, dayjs
+- *Tools:* npm, git, GitHub, Firebase CLI
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Not applicable. Our project is 100% digital, requiring only a device with a web browser and an internet connection to function.
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+bash
+
+# Clone the repository
+git clone: https://github.com/NBR-24/PothuHole
+
+# Navigate to the project directory
+cd PothuHole
+
+# Install dependencies
+npm install
 
 # Run
-[commands]
+bash
+
+# Start the development server
+npm start
+
+# Run
+http://pothu-hole.vercel.app
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="2880" height="1524" alt="Screenshot 2025-08-09 212432" src="https://github.com/user-attachments/assets/a94845cb-3dde-44b7-a21e-2709a583c5a2" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="2880" height="1524" alt="Screenshot 2025-08-09 212647" src="https://github.com/user-attachments/assets/d7e5c722-7f28-4558-9e9c-6a0173b188cf" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="2880" height="1524" alt="Screenshot 2025-08-09 212659" src="https://github.com/user-attachments/assets/f3b67d09-e0e8-41fd-8600-36cc3ea64a7c" />
+
+<img width="2880" height="1524" alt="Screenshot 2025-08-09 212712" src="https://github.com/user-attachments/assets/42ae30b9-c2fc-46c1-bc64-d4a2d54b62f1" />
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Navami BR: Devloper
+- Sinaj PS: Devloper
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
@@ -100,76 +90,3 @@ Made with ❤️ at TinkerHub Useless Projects
 
 
 
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
