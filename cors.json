@@ -1,0 +1,23 @@
+[
+  {
+    "origin": [
+      "http://localhost:3000",
+      "https://pot-hole-rating.web.app",
+      "https://pot-hole-rating.firebaseapp.com"
+    ],
+    "method": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "responseHeader": [
+      "Content-Type",
+      "Access-Control-Allow-Origin",
+      "Authorization",
+      "x-goog-resumable"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]

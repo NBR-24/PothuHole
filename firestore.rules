@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read/write access to the 'reports' collection for development.
+    // WARNING: This is insecure for production. You should implement authentication
+    // and secure these rules before deploying your app publicly.
+    match /reports/{reportId} {
+      allow read, write: if true;
+    }
+  }
+}
