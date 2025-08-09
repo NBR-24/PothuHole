@@ -4,7 +4,7 @@
  * It includes fields for image upload, location, danger level, and a description.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Container,
   Typography,
