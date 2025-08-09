@@ -76,8 +76,8 @@ For Software:
 
 
 ## Team Contributions
-- Navami BR: Devloper
-- Sinaj PS: Devloper
+- Navami BR: Developer
+- Sinaj PS: Developer
 
 
 ---
